@@ -23,6 +23,15 @@ body {
     background-color: var(--cream);
 }
 
+@media (min-width: 768px) {
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -31,7 +40,15 @@ img {
 
 .container {
     width: calc(100% - 2rem);
+    max-width: 540px;
     margin: 4.25rem auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        margin: 0;
+    }
+    
 }
 
 .balance {
@@ -43,11 +60,23 @@ img {
     align-items: center;
 }
 
+@media (min-width: 768px) {
+    .balance {
+        padding: 1.875rem;
+    }
+}
+
 .balance__title {
-    font-size: 15px;
+    font-size: 14.5px;
     display: block;
     color: var(--veryPaleOrange);
     opacity: .9;
+}
+
+@media (min-width: 768px) {
+    .balance__title {
+        font-size: 16px;
+    }
 }
 
 .balance__total {
@@ -58,6 +87,12 @@ img {
     color: var(--veryPaleOrange);
 }
 
+@media (min-width: 768px) {
+    .balance__total {
+        font-size: 1.75rem;
+    }
+}
+
 .spending {
     margin-top: 1rem;
     background-color: var(--veryPaleOrange);
@@ -65,9 +100,22 @@ img {
     border-radius: 8px;
 }
 
+@media (min-width: 768px) {
+    .spending {
+        margin-top: 1.5rem;
+        padding: 2.5rem;
+    }
+}
+
 .spending__title {
     color: var(--darkBrown);
     font-size: 1.375rem;
+}
+
+@media (min-width: 768px) {
+    .spending__title {
+        font-size: 1.875rem;
+    }
 }
 
 .spending__chart {
@@ -78,10 +126,18 @@ img {
     gap: 0.75rem;
 }
 
+@media (min-width: 768px) {
+    .spending__chart {
+        margin-top: 4rem;
+        gap: 1.125rem;
+    }
+}
+
 .spending__bar-container {
     width: 100%;
     height: 0;
     position: relative;
+    transition: height .6s ease-in-out;
 }
 
 .spending__bar {
@@ -104,9 +160,8 @@ img {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: -38px;
-    width: 52px;
-    height: 30px;
+    top: -32px;
+    padding: .313rem;
     border-radius: 4px;
     font-weight: 700;
     background-color: var(--darkBrown);
@@ -119,44 +174,25 @@ img {
     opacity: 0;
 }
 
+@media (min-width: 768px) {
+    .spending__bar-label {
+        padding: 0.5rem;
+        top: -42px;
+        font-size: 14px;
+    }
+}
+
 .spending__bar-container:hover .spending__bar-label {
     visibility: visible;
     opacity: 1;
 }
 
-.spending__bar--highest {
+.spending__bar--current {
     background-color: var(--cyan);
 }
 
-.spending__bar-container:nth-child(1) {
-    height: 33.33%;
-}
-
-.spending__bar-container:nth-child(2) {
-    height: 66.67%;
-}
-
-.spending__bar-container:nth-child(3) {
-    height: 100%;
-}
-
-.spending__bar-container:nth-child(4) {
-    height: 59.33%;
-}
-
-.spending__bar-container:nth-child(5) {
-    height: 44.67%;
-}
-
-.spending__bar-container:nth-child(6) {
-    height: 82.67%;
-}
-
-.spending__bar-container:nth-child(7) {
-    height: 48.67%;
-}
-
 .spending__labels {
+    height: 16px;
     margin-top: .75rem;
     display: flex;
     align-items: center;
@@ -164,11 +200,24 @@ img {
     gap: 0.75rem;
 }
 
+@media (min-width: 768px) {
+    .spending__labels {
+        height: 16px;
+        gap: 1.125rem;
+    }
+}
+
 .spending__label {
     width: 100%;
     font-size: 12px;
     text-align: center;
     color: var(--mediumBrown);
+}
+
+@media (min-width: 768px) {
+    .spending__label {
+        font-size: 14px;
+    }
 }
 
 .spending__resume {
@@ -180,11 +229,24 @@ img {
     justify-content: space-between;
 }
 
+@media (min-width: 768px) {
+    .spending__resume {
+        margin-top: 2rem;
+        padding-top: 2rem;
+    }
+}
+
 .spending__month-title {
     font-size: 14.5px;
     display: block;
     color: var(--mediumBrown);
     opacity: .9;
+}
+
+@media (min-width: 768px) {
+    .spending__month-title {
+        font-size: 16px;
+    }
 }
 
 .spending__month-total {
@@ -193,6 +255,12 @@ img {
     font-weight: 700;
     margin-top: 0.5rem;
     color: var(--darkBrown);
+}
+
+@media (min-width: 768px) {
+    .spending__month-total {
+        font-size: 2.375rem;
+    }
 }
 
 .spending__last-month {
@@ -207,9 +275,21 @@ img {
     margin-top: .25rem;
 }
 
+@media (min-width: 768px) {
+    .spending__last-month-title {
+        font-size: 16px;
+    }
+}
+
 .spending__last-month-percentage {
     display: block;
     font-weight: 700;
     color: var(--darkBrown);
     font-size: 1.125rem;
+}
+
+@media (min-width: 768px) {
+    .spending__last-month-percentage {
+        font-size: 1.25rem;
+    }
 }
