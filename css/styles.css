@@ -53,7 +53,7 @@ img {
 
 .balance {
     background-color: var(--softRed);
-    border-radius: 8px;
+    border-radius: 12px;
     padding: 1.5rem 1.5rem 1.5rem 1.25rem;
     display: flex;
     justify-content: space-between;
@@ -62,6 +62,7 @@ img {
 
 @media (min-width: 768px) {
     .balance {
+        border-radius: 24px;
         padding: 1.875rem;
     }
 }
@@ -97,13 +98,14 @@ img {
     margin-top: 1rem;
     background-color: var(--veryPaleOrange);
     padding: 1.5rem 1.25rem;
-    border-radius: 8px;
+    border-radius: 12px;
 }
 
 @media (min-width: 768px) {
     .spending {
         margin-top: 1.5rem;
         padding: 2.5rem;
+        border-radius: 24px;
     }
 }
 
@@ -114,7 +116,7 @@ img {
 
 @media (min-width: 768px) {
     .spending__title {
-        font-size: 1.875rem;
+        font-size: 2rem;
     }
 }
 
@@ -245,7 +247,7 @@ img {
 
 @media (min-width: 768px) {
     .spending__month-title {
-        font-size: 16px;
+        font-size: 18px;
     }
 }
 
@@ -259,7 +261,7 @@ img {
 
 @media (min-width: 768px) {
     .spending__month-total {
-        font-size: 2.375rem;
+        font-size: 2.75rem;
     }
 }
 
@@ -277,7 +279,7 @@ img {
 
 @media (min-width: 768px) {
     .spending__last-month-title {
-        font-size: 16px;
+        font-size: 18px;
     }
 }
 
@@ -290,6 +292,6 @@ img {
 
 @media (min-width: 768px) {
     .spending__last-month-percentage {
-        font-size: 1.25rem;
+        font-size: 1.375rem;
     }
 }
