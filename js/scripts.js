@@ -2,7 +2,6 @@ const spendingLabels = document.getElementById('spendingLabels');
 const spendingChart = document.getElementById('spendingChart');
 
 const currentDay = new Date().getDay();
-const chartMaxHeight = spendingChart.clientHeight;
 
 document.addEventListener("DOMContentLoaded", () => {
     getData();
@@ -37,15 +36,16 @@ function setData(dataArr) {
         const spendingBarContainer = document.createElement("div");
         spendingBarContainer.classList.add("spending__bar-container");
 
+        // Set the height
         if (maxAmount === amount) {
             setTimeout(() => {
                 spendingBarContainer.style.height = "100%";
-            }, 1000);
+            }, 50);
         } else {
             setTimeout(() => {
                 const spendingBarHeight = ((amount * 100) / maxAmount).toFixed(2);
                 spendingBarContainer.style.height = `${spendingBarHeight}%`;
-            }, 1000);
+            }, 50);
         }
 
         const spendingBar = document.createElement("div");
